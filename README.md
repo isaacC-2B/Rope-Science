@@ -1,4 +1,4 @@
-# “iRiS Source Code”
+# iRiS Source Code
 
 This is the source code for "iRiS" my portable kernmantle rope inspection system designed to inspect, monitor, and report the condition of kernmantle climbing and work-at-height safety ropes
 
