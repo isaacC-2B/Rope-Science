@@ -1,0 +1,35 @@
+[property]
+gpu-id=0
+# Normalization: 1 / (std * 255)
+net-scale-factor=0.01712475
+# Mean * 255
+offsets=123.675;116.28;103.53
+model-color-format=0
+onnx-file=efficientnet_b5_batch3.onnx
+# TensorRT will create this 'engine' file on the first run
+model-engine-file=efficientnet_b5_batch3.onnx_b3_gpu0_fp16.engine
+labelfile-path=labels.txt
+infer-dims=3;456;456
+batch-size=3
+# 1 = FP16 (Fastest on Orin Nano)
+network-mode=1
+num-detected-classes=2
+interval=0
+gie-unique-id=1
+# 1 = Classifier
+network-type=1
+output-blob-names=output
+# This tells DeepStream to keep the aspect ratio when resizing for the model
+maintain-aspect-ratio=1
+# Sets the background color for padding (0 = Black)
+scaling-filter=1 
+scaling-compute-hw=0
+force-implicit-batch-dim=0
+classifier-threshold=0.5
+display-label-conf=1
+
+custom-colour-bbox-0=1.0;0.0;0.0;1.0
+custom-colour-label-0=1.0;0.0;0.0;1.0
+custom-colour-bbox-1=0.0;1.0;0.0;1.0
+custom-colour-label-1=0.0;1.0;0.0;1.0
+
